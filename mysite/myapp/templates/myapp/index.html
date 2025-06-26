@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta name="description" content="Яблочный уксус (ACV) – это ферментированный продукт из яблочного сока, который веками использовался в кулинарии и народной медицине.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <title>Яблочный уксус</title>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="/static/Logo.svg" class="logo-img" alt="Логотип">
+      </div>
+      <div class="contact-info">
+        <a href="tel:Номер телефона" target="_blank">  +7 (917) 123-03-03   </a>
+        <a href="https://vk.com/nashakyhnia" target="_blank" style="display: block;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" class="vk">
+            <rect width="38" height="38" rx="19" fill="#231A13" fill-opacity="0.2"/>
+            <g clip-path="url(#clip0_1_133)">
+              <path d="M19.8932 25.3636C13.06 25.3636 9.1624 20.5861 9 12.6364H12.4228C12.5353 18.4713 15.0587 20.9428 17.0575 21.4525V12.6364H20.2805V17.6686C22.2542 17.4521 24.3279 15.1589 25.0275 12.6364H28.2505C27.9868 13.9446 27.4614 15.1834 26.7069 16.275C25.9525 17.3666 24.9852 18.2878 23.8657 18.9809C25.1154 19.6142 26.2191 20.5105 27.1041 21.6106C27.9891 22.7109 28.6353 23.99 29 25.3636H25.4522C25.1248 24.1705 24.4595 23.1025 23.5395 22.2935C22.6195 21.4844 21.4857 20.9703 20.2805 20.8155V25.3636H19.8932Z" fill="#231A13"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_1_133">
+                <rect width="20" height="14" fill="white" transform="translate(9 12)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="intro">
+      <div class="flex-content">
+        <img src="/static/Osnova.png" alt="Яблочный уксус" class="intro-img">
+        <div class="text-content">
+          <p class="section-title">Дорогие друзья!</p>
+          <p class="section-text first-line-indent">
+            С радостью представляем вам натуральный яблочный уксус, который мы производим сами. Для его изготовления мы используем яблочный сидр, полученный из яблок сорта «Жигулёвские», выращенных в живописных Жигулёвских горах.
+          </p>
+          <p class="section-text first-line-indent">
+            Процесс ферментации яблочного уксуса занимает не менее 24 месяцев, что позволяет ему достичь безупречного вкуса и аромата.
+          </p>
+        </div>
+      </div>
+      <h2 class="section-title otstyp" style="margin-bottom: 30px">
+        15 ПРИЧИН ПОЧЕМУ ПОЛЕЗЕН ЯБЛОЧНЫЙ УКСУС
+      </h2>
+      <h1 style="display: inline-block; font-weight: normal; font-size: 23px; color: rgba(35, 26, 19, 1); text-indent: 2rem; margin: 0; padding: 0;">Яблочный уксус (ACV)</h1>
+      <p style="display: inline; font-size: 23px; color: rgba(35, 26, 19, 1); margin: 0; padding: 0;">
+         - это ферментированный продукт из яблочного сока, который веками использовался в кулинарии и народной медицине. Вот 15 причин, почему он может быть полезен для вашего здоровья:
+      </p>
+
+    </section>
+
+    <section class="reasons-list">
+      {% for card in cards %}
+        <div class="reason-item">
+          <h2>{{ card.title }}</h2>
+          <p>{{ card.description }}</p>
+        </div>
+      {% endfor %}
+    </section>
+
+    <div class="">
+      <h2 class="how-to-title otstyp">КАК УПОТРЕБЛЯТЬ ЯБЛОЧНЫЙ УКСУС</h2>
+      <p class="how-to-description ">
+        СУЩЕСТВУЕТ НЕСКОЛЬКО СПОСОБОВ ВКЛЮЧИТЬ ЯБЛОЧНЫЙ УКСУС В СВОЙ РАЦИОН:
+      </p>
+      {% for method in methods %}
+        <div class="consumption-methods">
+          <div class="method">
+            <div class="circle">{{ method.id }}</div>
+            <div class="method-text">
+              <span class="method-title">{{ method.title }}</span>
+              <span class="method-description">{{ method.description }}</span>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="why-it-works">
+      <h2 class="why-it-works-title">ПОЧЕМУ ЯБЛОЧНЫЙ УКСУС РАБОТАЕТ</h2>
+      {% for galki in galks %}
+        <div class="consumption-methods">
+          <div class="benefit">
+            <img src="/static/galka.svg" alt="Галка" class="icon">
+            <div class="benefit-text first-line-indent3"> <span> {{ galki.description }} </span> </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </main>
+
+  <footer class="colorFooter1 colorFooter2" style="margin-top: 90px">
+    <div style = "width:100%; display:flex; align-items:center; flex-direction:column;">
+      <div style = "width:78%; display:flex; justify-content:space-between; align-items:center; text-align: center; box-sizing: border-box; max-width: 1440px">
+        <div class = "width:25%; display:flex; flex-direction:column;">
+          <p class="textColor" style="font-size: 20px"><strong>КОНТАКТЫ:</strong></p>
+
+          <div class="footer-info" style="margin-bottom: 4px">
+            <a href="tel:Номер телефона" target="_blank" class="textColor size-inf" style="margin-right: 5px; margin-top: -6px" >  +7 (917) 123-03-03   </a>
+            <a href="https://vk.com/nashakyhnia" target="_blank" style="display: block; margin-top: -6px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 38 38" class="vk">
+                <rect width="38" height="38" rx="19" fill="#231A13" fill-opacity="0.2"/>
+                <g clip-path="url(#clip0_1_133)">
+                  <path d="M19.8932 25.3636C13.06 25.3636 9.1624 20.5861 9 12.6364H12.4228C12.5353 18.4713 15.0587 20.9428 17.0575 21.4525V12.6364H20.2805V17.6686C22.2542 17.4521 24.3279 15.1589 25.0275 12.6364H28.2505C27.9868 13.9446 27.4614 15.1834 26.7069 16.275C25.9525 17.3666 24.9852 18.2878 23.8657 18.9809C25.1154 19.6142 26.2191 20.5105 27.1041 21.6106C27.9891 22.7109 28.6353 23.99 29 25.3636H25.4522C25.1248 24.1705 24.4595 23.1025 23.5395 22.2935C22.6195 21.4844 21.4857 20.9703 20.2805 20.8155V25.3636H19.8932Z" fill="#231A13"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_133">
+                    <rect width="20" height="14" fill="white" transform="translate(9 12)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+        </div>
+          <a href="mailto:Почта" target="_blank" class="textColor size-inf"> ecodolinatt@gmail.com </a>
+          <br>
+          <p class="textColor"  style="font-size: 20px; margin-top: 30px"><strong>ГРАФИК РАБОТЫ:</strong></p>
+          <p class="textColor size-inf" >Ресторация: ПН-ПТ 7:45 - 16:00</p>
+          <p class="textColor size-inf">Кофейня: ПН-ПТ 9:00 - 17:00</p>
+          <br>
+          <p class="textColor" style="font-size: 20px"><strong>АДРЕС:</strong></p>
+          <p class="textColor size-inf">ЮЖНОЕ ШОССЕ, 165, КОРПУС 1.1,</p>
+          <p class="textColor size-inf no-wrap">ТЕХНОПАРК "ЖИГУЛЕВСКАЯ ДОЛИНА"</p>
+        </div>
+        <div style="width: 78%; display: flex; justify-content: flex-end; align-items: center; padding-left: 2%; padding-right: 2%; ">
+          <div id="map" class="map" style="border-radius: 20px; overflow: hidden;"></div>
+        </div>
+
+        <script type="text/javascript">
+          ymaps.ready(function () {
+            var map = new ymaps.Map("map", {
+              center: [53.556812, 49.214913],
+              zoom: 17
+            });
+
+           var myPlacemark = new ymaps.Placemark([53.556812, 49.214913], {
+                hintContent: 'Наша кухня',
+            }, {
+                iconColor: '#FF0000'
+            });
+            map.geoObjects.add(myPlacemark)
+          });
+        </script>
+
+      </div>
+    </div>
+    <a href="https://alvirity.ru/" target="_blank" style="display: block;">
+      <div class="icon1">
+        <img src="/static/Alviriti.svg" alt="альвирити" class="icon2">
+      </div>
+    </a>
+    <div class="footer-bottom textColor">
+      2025 © Все права защищены.
+      <a href="" class="privacy-link" target="_blank">Политика конфиденциальности</a>.
+    </div>
+  </footer>
+</body>
+</html>

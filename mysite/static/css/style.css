@@ -1,0 +1,428 @@
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/static/font/Montserrat-Regular.ttf') format('truetype');
+}
+
+/* Тело страницы */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(230, 230, 230, 1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+p, span, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-description{
+    font-size: 23px;
+    color: rgba(35, 26, 19, 1);
+    margin-top: 30px;
+}
+
+/* Отступ */
+.first-line-indent {
+    text-indent: 1rem;
+}
+
+.first-line-indent3 {
+    text-indent: 2rem;
+}
+
+/* Цвет текста */
+.textColor {
+    color: rgba(35, 26, 19, 1);
+}
+
+
+.color_blok {
+    background-color: rgba(230, 230, 230, 1);
+}
+
+
+.fonchik {
+    background-color: rgba(230, 230, 230, 1);
+}
+
+/* Нумерация */
+.circle {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    background-color: rgba(196, 153, 108, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+}
+
+
+.vk rect {
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на vk */
+.vk:hover rect {
+    fill-opacity: 0;
+}
+
+/* Цвет футера */
+.colorFooter1 {
+    background-color: rgba(230, 230, 230, 1);
+    height: auto
+}
+
+
+.colorFooter2 {
+    background-color: rgba(0, 0, 0, 0.05);
+    height: auto
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(196, 153, 108, 1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: rgba(128, 110, 83, 1);
+}
+
+
+a {
+    color: rgba(35, 26, 19, 1);
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Шапка */
+header {
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 50px;
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo-img {
+    width: 231px;
+    height: 170px;
+    margin-left: 50px;
+}
+
+
+.contact-info {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    gap: 20px;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(35, 26, 19, 1);
+}
+
+h3, h4 {
+    color: rgba(35, 26, 19, 1);
+}
+
+h2, p {
+    margin: 10px 0;
+}
+
+.flex-content {
+    margin-left: -19px;
+    display: flex;
+    align-items: center;
+
+}
+
+/* Фото osnova */
+.intro-img {
+    width: 497px;
+    height: 434px;
+    margin-right: 40px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.intro {
+    width: 1440px
+    border-radius: 10px;
+}
+
+
+/* Футер */
+footer {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+.footer-container {
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+* {
+    box-sizing: border-box;
+}
+.footer-content {
+
+    text-align: center;
+    flex: 1;
+    max-width: 60%;
+}
+.map {
+    width: 575px;
+    height: 463px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    box-shadow: -7px 7px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+/* Стиль для main */
+.main-content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.otstyp {
+    margin-top: 30px;
+}
+
+.main-content .section-title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(35, 26, 19, 1);
+
+}
+
+
+.main-content .section-text {
+    margin-top: 24px;
+    color: rgba(35, 26, 19, 1);
+    font-size: 26px;
+}
+
+/* Список причин */
+.reasons-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+
+}
+
+.reason-item {
+    background-color: rgba(196, 153, 108, 1);
+    text-align: center;
+    padding: 16px;
+    border: 2px solid #806E53;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок в карточке */
+.reason-item h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    border-bottom: 2px solid rgba(128, 110, 83, 1);
+    padding-bottom: 8px;
+}
+
+/* Текст в карточке */
+.reason-item p {
+    font-size: 16px;
+    color: rgba(35, 26, 19, 1);
+}
+
+.vk rect {
+    transition: all 0.3s ease;
+}
+
+.vk:hover rect {
+    fill-opacity: 0;
+}
+
+/* Методы потребления */
+.how-to-consume {
+    margin-top: 24px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Как потреблять */
+.how-to-title {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.how-to-description {
+    font-size: 23px;
+    margin-top: 30px;
+    color: rgba(35, 26, 19, 1);
+    text-align: left;
+}
+
+.consumption-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.method {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.circle {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(196, 153, 108, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.size-inf {
+     font-size: 17px
+}
+/* Текст в методах потребления */
+.method-text {
+    margin-left: 16px;
+    font-size: 25px;
+}
+
+/* Заголовок в метода потребления */
+.method-title {
+    font-weight: 600;
+    color: rgba(35, 26, 19, 1);
+}
+
+/* Описание метода потребления */
+.method-description {
+    font-weight: normal;
+    color: rgba(35, 26, 19, 1);
+}
+
+
+.why-it-works {
+    font-weight: bold;
+    margin-top: 0 px;
+}
+
+
+.why-it-works-title {
+    font-size: 25px;
+    text-align: center;
+    color: rgba(35, 26, 19, 1);
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+
+/* Галочка */
+.icon {
+    width: 40px;
+    height: 40px;
+}
+.icon1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  margin-bottom: -15px;
+}
+.icon2 {
+  width: 240px;
+  height: 46;
+}
+.benefit-text {
+    margin-left: 16px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.benefit-text span {
+    font-weight: normal;
+    color: rgba(35, 26, 19, 1);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-muted {
+    color: rgba(128, 128, 128, 1);
+}
+
+/* Нет переносу строки! */
+.no-wrap {
+    white-space: nowrap;
+}
